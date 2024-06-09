@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "customerName": "John Doe",
+    "jobType": "Plumbing",
+    "status": "Scheduled",
+    "appointmentDate": "2024-06-15T09:00:00Z",
+    "technician": "Jane Smith"
+  },
+  {
+    "id": 2,
+    "customerName": "Alice Johnson",
+    "jobType": "Electrical",
+    "status": "Completed",
+    "appointmentDate": "2024-05-20T14:00:00Z",
+    "technician": "Bob Brown"
+  },
+  {
+    "id": 3,
+    "customerName": "John Doe",
+    "jobType": "Plumbing",
+    "status": "Scheduled",
+    "appointmentDate": "2024-06-08T20:43",
+    "technician": "Jane Smith"
+  }
+]
