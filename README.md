@@ -11,8 +11,10 @@ This project is a web application that allows users to manage job data. It consi
 ## Setup Instructions
 
 ### Backend Setup
-1. Clone the repository:
-
+1. Clone the repository and go to backend directory:
+     ```bash
+    cd backend/
+    ```
 2. Install the dependencies:
     ```bash
     npm install
@@ -26,7 +28,7 @@ This project is a web application that allows users to manage job data. It consi
 ### Frontend Setup
 1. Navigate to the frontend directory:
     ```bash
-    cd ../frontend
+    cd frontend/
     ```
 
 2. Install the dependencies:
