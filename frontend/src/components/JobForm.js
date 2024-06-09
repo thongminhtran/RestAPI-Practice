@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { TextField, Button, Paper } from '@mui/material';
 import axios from 'axios';
+import {API_URL} from "../config";
 
 const JobForm = ({ fetchJobs, selectedJob, setSelectedJob }) => {
     const [formData, setFormData] = useState({
@@ -24,10 +25,10 @@ const JobForm = ({ fetchJobs, selectedJob, setSelectedJob }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (selectedJob) {
-            await axios.put(`http://localhost:3001/jobs/${selectedJob.id}`, formData);
+            await axios.put(`${API_URL}/jobs/${selectedJob.id}`, formData);
             setSelectedJob(null);
         } else {
-            await axios.post('http://localhost:3001/jobs', formData);
+            await axios.post(`${API_URL}/jobs/`, formData);
         }
         fetchJobs();
         setFormData({

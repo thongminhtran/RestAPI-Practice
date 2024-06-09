@@ -2,23 +2,22 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button } from '@mui/material';
 import JobForm from './JobForm';
-
+import { API_URL } from '../config';
 const JobListView = () => {
     const [jobs, setJobs] = useState([]);
     const [selectedJob, setSelectedJob] = useState(null);
-
     useEffect(() => {
         fetchJobs();
     }, []);
 
     const fetchJobs = async () => {
-        const response = await axios.get('http://localhost:3001/jobs');
+        const response = await axios.get(`${API_URL}/jobs`);
         setJobs(response.data);
         console.log(response.data);
     };
 
     const handleDelete = async (id) => {
-        await axios.delete(`http://localhost:3001/jobs/${id}`);
+        await axios.delete(`${API_URL}/jobs/${id}`);
         fetchJobs();
     };
 
