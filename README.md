@@ -135,5 +135,5 @@ The backend server will be running on `http://localhost:3001` and the frontend o
 - **Edit Job:** Click the "Edit" button next to a job to modify the data with its details.
 - **Delete Job:** Click the "Delete" button next to a job to remove it from the list.
 
-Feel free to explore and enhance the application further. Contributions are welcome!
+Feel free to pm me any questions, thank you all!!!
 
