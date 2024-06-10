@@ -18,7 +18,7 @@ const JobListView = () => {
 
     const handleDelete = async (id) => {
         await axios.delete(`${API_URL}/jobs/${id}`);
-        fetchJobs();
+        await fetchJobs();
     };
 
     const handleEdit = (job) => {

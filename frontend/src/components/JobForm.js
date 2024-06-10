@@ -22,8 +22,7 @@ const JobForm = ({ fetchJobs, selectedJob, setSelectedJob }) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    const handleSubmit = async () => {
         if (selectedJob) {
             await axios.put(`${API_URL}/jobs/${selectedJob.id}`, formData);
             setSelectedJob(null);
@@ -50,6 +49,7 @@ const JobForm = ({ fetchJobs, selectedJob, setSelectedJob }) => {
                     onChange={handleChange}
                     fullWidth
                     margin="normal"
+                    required
                 />
                 <TextField
                     name="jobType"
@@ -58,6 +58,7 @@ const JobForm = ({ fetchJobs, selectedJob, setSelectedJob }) => {
                     onChange={handleChange}
                     fullWidth
                     margin="normal"
+                    required
                 />
                 <TextField
                     name="status"
@@ -66,6 +67,7 @@ const JobForm = ({ fetchJobs, selectedJob, setSelectedJob }) => {
                     onChange={handleChange}
                     fullWidth
                     margin="normal"
+                    required
                 />
                 <TextField
                     name="appointmentDate"
@@ -78,6 +80,7 @@ const JobForm = ({ fetchJobs, selectedJob, setSelectedJob }) => {
                     InputLabelProps={{
                         shrink: true,
                     }}
+                    required
                 />
                 <TextField
                     name="technician"
@@ -86,6 +89,7 @@ const JobForm = ({ fetchJobs, selectedJob, setSelectedJob }) => {
                     onChange={handleChange}
                     fullWidth
                     margin="normal"
+                    required
                 />
                 <Button type="submit" variant="contained" color="primary">
                     {selectedJob ? 'Update Job' : 'Add Job'}
