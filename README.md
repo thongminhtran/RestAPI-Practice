@@ -4,9 +4,11 @@ This project is a web application that allows users to manage job data. It consi
 
 ## Table of Contents
 - [Setup Instructions](#setup-instructions)
+- [API Configuration](#api-configuration)
 - [API Documentation](#api-documentation)
 - [Architecture and Libraries](#architecture-and-libraries)
 - [Usage](#usage)
+
 
 ## Setup Instructions
 
@@ -43,6 +45,23 @@ This project is a web application that allows users to manage job data. It consi
 
 The backend server will be running on `http://localhost:3001` and the frontend on `http://localhost:3000`.
 
+## API Configuration
+
+In order to configure the API endpoint used by the application, follow these steps:
+
+1. Navigate to the file `/frontend/src/config.js`.
+2. Locate the `API_URL` constant.
+3. Replace the value with the desired API endpoint URL.
+
+By default, the application is configured to use the local development server:
+
+```javascript
+export const API_URL = 'http://localhost:3001';
+```
+If you need to use a public API endpoint, replace the value with the appropriate URL. For example:
+```javascript
+export const API_URL = 'https://restapi-practice-it5p.onrender.com';
+```
 ## API Documentation
 
 ### GET /jobs
